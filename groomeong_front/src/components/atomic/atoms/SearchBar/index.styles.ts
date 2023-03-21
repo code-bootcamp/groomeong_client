@@ -2,29 +2,29 @@ import styled from "@emotion/styled";
 import * as GS from "../../../../../theme/global";
 
 interface ISearchBarProps {
-  size: "small" | "medium" | "large";
+  sizes: "small" | "medium" | "large";
 }
 
 interface IInputContentProps {
-  size: "small" | "medium" | "large";
+  sizes: "small" | "medium" | "large";
   placeholder: string;
 }
 
 export const SearchBox = styled.div`
   width: ${(props: ISearchBarProps) =>
-    props.size === "small"
+    props.sizes === "small"
       ? "508px"
-      : props.size === "medium"
+      : props.sizes === "medium"
       ? "744px"
-      : props.size === "large"
+      : props.sizes === "large"
       ? "1054px"
       : ""};
   height: ${(props: ISearchBarProps) =>
-    props.size === "small"
+    props.sizes === "small"
       ? "60px"
-      : props.size === "medium"
+      : props.sizes === "medium"
       ? "76px"
-      : props.size === "large"
+      : props.sizes === "large"
       ? "92px"
       : ""};
   border-radius: 12px;
@@ -35,13 +35,13 @@ export const SearchBox = styled.div`
   border: 1px;
 `;
 
-export const InputContent = styled.input`
+export const InputContent = styled.input<IInputContentProps>`
   width: ${(props: IInputContentProps) =>
-    props.size === "small"
+    props.sizes === "small"
       ? "404px"
-      : props.size === "medium"
+      : props.sizes === "medium"
       ? "640px"
-      : props.size === "large"
+      : props.sizes === "large"
       ? "950px"
       : ""};
   height: 100%;
