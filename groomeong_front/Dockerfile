@@ -15,6 +15,6 @@ RUN yarn build
 
 
 # 4. 실행 파일 복사하기 ##
-COPY  ./myfolder /.next/
+COPY --from=0 /myfolder/.next /myfolder/.next
 # 5. 도커 안에서 프로그램 실행
 CMD yarn start
