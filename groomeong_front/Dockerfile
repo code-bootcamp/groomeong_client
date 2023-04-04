@@ -13,5 +13,8 @@ RUN yarn install
 COPY . /myfolder/
 RUN yarn build
 
-# 4. 도커 안에서 프로그램 실행
+
+# 4. 실행 파일 복사하기
+COPY ./build /myfolder/
+# 5. 도커 안에서 프로그램 실행
 CMD yarn start
